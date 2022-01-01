@@ -4,7 +4,7 @@ Brief interpretations of various subjects in the space of Neural Networks
 
 ## Basics
 
-Below shows various questions I've though of as I'm trying to formulate my theorical understanding of the subjects.
+Below shows various questions I've thought of as I'm trying to formulate my theorical understanding of the subjects.
 
 ### Fundamentals
 
