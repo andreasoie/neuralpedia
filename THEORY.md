@@ -44,7 +44,19 @@ Below shows various questions I've though of as I'm trying to formulate my theor
 
 #### There seems to be a certain combation of layers, most frequently used - why is that?
 
-### Pass functions
+### Transformations & Augmentation (move?)
+
+#### Why do we often need to normalize our data?
+
+#### Some data may have a wide-spread of values, how do we cope with this?
+
+#### Explain the following terms with examples
+
+##### Batch normalization
+
+#####
+
+### "Pass" functions
 
 #### Whats a forward pass, and what is imporantant to think of when designing this function?
 
@@ -62,7 +74,19 @@ Below shows various questions I've though of as I'm trying to formulate my theor
 
 ### Loss functions
 
+#### Why do we need a loss function, and why do we often used predefined functions
+
 #### Top 3 most-commenly used, and why they work
+
+### Special questions
+
+#### Why do we always need requires-grad during training, and why do we need to reset this?
+
+#### Why is bias added to layers?
+
+### Why do we certain times only add it to a few layers, but not the rest?
+
+### Do we need batch normalizaiton between actiavation layers? Does this incr/decr accuracy?
 
 ### Special events
 
@@ -71,6 +95,8 @@ Below shows various questions I've though of as I'm trying to formulate my theor
 #### Learning rate?
 
 #### Changig learning rate progressivly (momentum) ?
+
+#### How does i.e.: an image look like before/after a normalization (tfms)?
 
 #### Resetting gradient
 
@@ -84,4 +110,23 @@ Below shows various questions I've though of as I'm trying to formulate my theor
 
 #### How do we use this neaural net?
 
+#### Do we generally always need a good baseline to compare results to?
+
 #### Inference: GPU vs CPU: when to use what, and what do we consider?
+
+#### Deployment strategies
+
+### A Recipe for Training Neural Networks
+
+> http://karpathy.github.io/2019/04/25/recipe/
+
+#### Summarized
+
+1.
+2.
+3.
+4. X.
+
+#### What do we need inside the training loop?
+
+Controversial recommendations e.g. early stopping? small batch sizes?
