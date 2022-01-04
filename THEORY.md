@@ -86,6 +86,7 @@ Essentially just another term for activation functions in neural networks.
 #### Does the combinations of layers and activation functions matter?
 
 This is highly dependent on what kind of neural network architecture being used.
+Regards to the combinations with batch normalization, we often use batch normalization immediately after a fully connected layer or convolutional layer, and before nonlinear activation functions.
 
 #### There seems to be a certain combination of layers, most frequently used - why is that?
 
@@ -95,29 +96,88 @@ As stated above, it depends. However, most vision deep neural networks follow th
 
 #### Why do we often need to normalize our data?
 
-#### Some data may have a wide-spread of values, how do we cope with this?
+We can divide the normalizing process into two steps: pre training and during training.
 
-#### Explain the following terms with examples
+The most successful DL models are trained on normalized data.
+In the pre-processing stage, we often normalize the data to some logical range e.g: 0 to 1. This is done to prevent problems during training such as vanishing or exploding gradients.
 
-##### Batch normalization
+For example: a car dataset with a lot of different features, like mileage, horsepower, etc.
+Say one car is brand new and has zero milage, whilst another car, e.g. an old indian taxicab, has 100,000,000 milage. During training the high milage value may propagate through the network, ending up causing the gradients to explode (if using e.g.: SGD). This effectively makes the network unstable, and will cause trouble to generalize well. The mileage will be prioritized well above the other features.
 
-#####
+On the other hand, the common method of batch normalization also normalizes the data to a certain range, but it is done during training after some fully connected / convolutional layer, but prior to nonlinear functions. Sections below shows why we normalize the data in batches.
 
-### "Pass" functions
+### Batch normalization
 
-#### Whats a forward pass, and what is imporantant to think of when designing this function?
+> What is it?
 
-#### Whats a backward pass (backprop), and what is imporantant to think of when designing this function?
+A technique for converting the interlayer outputs of a neural network into a standard format. This effectively'resets' the distribution of the preceding layer's output, allowing the subsequent layer to process it more efficiently.
 
-### [Activation functions](#activation_functions)
+> Advantages?
 
-#### Top 3 most-commenly used
+Normalization assures that no activation value is too high or too low, and each layer can learn independently of the others, this method leads to quicker learning rates.
+The "dropout" rate, or data lost between processing layers, is reduced by normalizing inputs. This enhances accuracy across the network tremendously.
 
-### Regulaztion
+> How does it work?
 
-### Optimizers
+Batch normalization impacts the output of the previous activation layer by subtracting the batch mean and then dividing by the batch standard deviation to improve the stability of the network.
 
-#### Top 3 most-commenly used, and why they work
+Since this shifting or scaling of outputs by a randomly initialized parameter reduces the accuracy of the weights in the next layer, a SGD is applied to remove this normalization if the loss function is too high.
+
+Batch normalization provides two more trainable parameters to a layer: the normalized output multiplied by a gamma (standard deviation) parameter, and a beta (mean) parameter. This is why batch normalization and gradient descents work together to allow data to be "denormalized" by modifying only these two weights for each output. By adjusting all other relevant weights, this resulted in decreased data loss and better network stability.
+
+### Propagations
+
+#### What is a forward propagation?
+
+A single forward propagation is a single step in the forward pass of a neural network. This simply means sending the data (e.g a image) through the network and receiving a output in some form of probability score.
+
+#### What is a backward propagation?
+
+A backward propagation, also called backpropagation, is a single step in the backward pass of a neural network. Its a way of computing gradients of expressions through recursive application of chain rule.
+
+The idea is that we can compute the gradient of the loss function with respect to the weights of the network. The weights would then be adjusted similarly to the equation: $w_i = w_i - \alpha * \partial_i$. Where $\alpha$ is the learning rate, $i$ is the index of the weight and $\partial_i$ is the gradient of the loss function with respect to the weight.
+
+## Activation functions
+
+#### What are they?
+
+As previously described, activation functions are the functions applied to certain hidden layers. In order to solve complex nonlinear problems, we represent nonlinear relationships by nonlinear functions. Generally, most nonlinear functions can work, however we often used the common functions such as sigmoid, relu, softmax, etc.
+
+#### Why are they used?
+
+TODO
+
+#### Do they have any limitations?
+
+TODO
+
+#### Definitions
+
+$\text{ReLU}(x) = (x)^+ = \max(0, x)$
+
+$\text{Sigmoid}(x) = \sigma(x) = \frac{1}{1 + \exp(-x)}$
+
+$\text{Tanh}(x) = \tanh(x) = \frac{\exp(x) - \exp(-x)} {\exp(x) + \exp(-x)}$
+
+### Regularization
+
+In short, we use regularization to prevent overfitting. Basically it is a tuning technique used to add a penalty to the loss/error function.
+
+#### Methods
+
+There exists many types of techniques to prevent overfitting, however the most commonly known functions are L1 and L2 regularization, max norm and dropout.
+
+**L1 regularization**: uses the L1 norm, which is the sum of the absolute values of the weights.
+
+**L2 regularization**: uses the L2 norm, which is the square root of the sum of the squares of the weights.
+
+**Max norm**: is a technique to prevent the weights from becoming too large.
+
+**Dropout**: see previous explaination.
+
+### Optimizing
+
+#### Top 3 most-commonly used, and why they work
 
 ### Loss functions
 
