@@ -142,12 +142,10 @@ The idea is that we can compute the gradient of the loss function with respect t
 As previously described, activation functions are the functions applied to certain hidden layers. In order to solve complex nonlinear problems, we represent nonlinear relationships by nonlinear functions. Generally, most nonlinear functions can work, however we often used the common functions such as sigmoid, relu, softmax, etc.
 
 #### Why are they used?
-
-TODO
+@TODO
 
 #### Do they have any limitations?
-
-TODO
+@TODO
 
 #### Definitions
 
@@ -158,7 +156,6 @@ $\text{Sigmoid}(x) = \sigma(x) = \frac{1}{1 + \exp(-x)}$
 $\text{Tanh}(x) = \tanh(x) = \frac{\exp(x) - \exp(-x)} {\exp(x) + \exp(-x)}$
 
 ### Regularization
-
 @TODO
 
 #### Methods
@@ -242,7 +239,7 @@ A loss function is a objective function that computes a single numerical value (
 $ loss = someLossFunction(predictedValues, actualValues) $
 Essentially, good prediction results in low loss, and bad prediction results in high loss.
 
-Sometimes it isn't always so straight forward as measuring the difference between outputs. Often, we have
+Sometimes it isn't always so straight forward as measuring the difference between outputs. Often we have
 figure out what kind of loss type we want to use. Reversely, we might want to sometimes maximize the loss instead of minimizing it - making it a "reward" function.
 
 #### Popular loss functions
@@ -286,32 +283,28 @@ Commonly we set bias=False for Linear/Conv2D -layers when using techniques like 
 
 ##### Most deep neural networks are feedforward, why is that - and what does backprop have to do with this?
 Neural networks are called feedforward, as the input data is fed through the network resulting in a output. In a single forward pass, there is not feedback connections. Its a single forward propagation from input layer to output layer. Feedback connections should not be confused with backprop in this context. When we have feedback connections, we're often talking about recurrent neural network opposted to convolutional neural networks.
+
 ##### Bias and Variance: the two big sources of error
 Bias: error rate on training set.
 Variance: error rate betwen training set and test set.
 
 #### Questionnaire
+@TODO
 
 - What is a dropout layer?
-
 - How do we change learning rate progressively?
-
 - Why do we need to zero gradients when doing proper backpropagation?
-
 - Techincally, what happens when we underfit and overfit the data?
 
 ##### Weird Topics
 @TODO
+
 - Controversial recommendations e.g. early stopping? small batch sizes?
-- 
 - Measuring performance
-
 - Performance indicators?
-
 - How do we use this neural net?
-
 - Do we generally always need a good baseline to compare results to?
-- 
+
 ##### Deployment strategies
 @TODO
 
@@ -325,7 +318,7 @@ Variance: error rate betwen training set and test set.
 
 **Note 1: Neural net training is a leaky abstraction**
 
-They are not “off-the-shelf” technology the second you deviate slightly from training an ImageNet classifier. by picking on backpropagation and calling it a “leaky abstraction”, but the situation is unfortunately much more dire. Backprop + SGD does not magically make your network work. BatchNorm does not magically make it converge faster. RNNs don’t magically let you “plug in” text. Just because you can formulate your problem as RL doesn’t mean you should. If you insist on using the technology without understanding how it works you are likely to fail. See notes on backpropagation [*here*](https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b)
+They are not “off-the-shelf” technology the second you deviate slightly from training an ImageNet classifier. By picking on backpropagation and calling it a “leaky abstraction”, but the situation is unfortunately much more dire. Backprop + SGD does not magically make your network work. BatchNorm does not magically make it converge faster. RNNs don’t magically let you “plug in” text. Just because you can formulate your problem as RL doesn’t mean you should. If you insist on using the technology without understanding how it works you are likely to fail. See notes on backpropagation [*here*](https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b)
 
 **Note 2: Neural net training fails silently**
 
@@ -465,7 +458,7 @@ tfms = torchvision.transforms.Compose([
 data = torchvision.datasets.ImageFolder(root='YOUR_DATA', transform=tfms)
 
 
-model = MegTurboModel()
+model = MegaTurboModel()
 
 N_EPOCHS = 1000
 LEARNING_RATE = 3e-4
