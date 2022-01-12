@@ -311,10 +311,8 @@ Variance: error rate betwen training set and test set.
 - Local vs. Cloud
 - Speed / compute
 - Edge devices
+- 
 ### Training Neural Networks
-
-([*ref*](#myfootnote1)</sup>)
-
 
 **Note 1: Neural net training is a leaky abstraction**
 
@@ -438,7 +436,7 @@ Once you find the best types of architectures and hyper-parameters you can still
 Once you make it here you’ll have all the ingredients for success: you have a deep understanding of the technology, the dataset and the problem, you’ve set up the entire training/evaluation infrastructure and achieved high confidence in its accuracy, and you’ve explored increasingly more complex models, gaining performance improvements in ways you’ve predicted each step of the way. You’re now ready to read a lot of papers, try a large number of experiments, and get your SOTA results. Good luck!
 
 
-<a name="myfootnote1">*ref*</a>: Source blogpost [*here*](http://karpathy.github.io/2019/04/25/recipe/).
+Source [*here*](http://karpathy.github.io/2019/04/25/recipe/).
 
 
 
