@@ -296,14 +296,14 @@ Variance: error rate betwen training set and test set.
 - Why do we need to zero gradients when doing proper backpropagation?
 - Techincally, what happens when we underfit and overfit the data?
 
-##### Weird Topics
-@TODO
+##### @TODO topics
 
 - Controversial recommendations e.g. early stopping? small batch sizes?
 - Measuring performance
 - Performance indicators?
-- How do we use this neural net?
-- Do we generally always need a good baseline to compare results to?
+- Vizualation techniques for understanding your neural net.
+- Bias-Variance & Precision-Recall tradeoff
+- Tuning GPU / utilizing max efficiency.
 
 ##### Deployment strategies
 @TODO
@@ -311,7 +311,9 @@ Variance: error rate betwen training set and test set.
 - Local vs. Cloud
 - Speed / compute
 - Edge devices
-- 
+- Techniques for inference speed
+
+
 ### Training Neural Networks like [*Karpathy*](http://karpathy.github.io/2019/04/25/recipe/)
 
 **Note 1: Neural net training is a leaky abstraction**
