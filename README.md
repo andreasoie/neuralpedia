@@ -1,4 +1,4 @@
-## Theory of Neural Networks
+# Neural Networks
 
 Brief interpretations of various subjects in the space of Neural Networks
 
@@ -291,14 +291,14 @@ Variance: error rate betwen training set and test set.
 - Why do we need to zero gradients when doing proper backpropagation?
 - Techincally, what happens when we underfit and overfit the data?
 
-##### Weird Topics
-@TODO
+##### @TODO topics
 
 - Controversial recommendations e.g. early stopping? small batch sizes?
 - Measuring performance
 - Performance indicators?
-- How do we use this neural net?
-- Do we generally always need a good baseline to compare results to?
+- Vizualation techniques for understanding your neural net.
+- Bias-Variance & Precision-Recall tradeoff
+- Tuning GPU / utilizing max efficiency.
 
 ##### Deployment strategies
 @TODO
@@ -306,10 +306,10 @@ Variance: error rate betwen training set and test set.
 - Local vs. Cloud
 - Speed / compute
 - Edge devices
-### Training Neural Networks
+- Techniques for inference speed
 
-([*ref*](#myfootnote1)</sup>)
 
+### Training Neural Networks like [*Karpathy*](http://karpathy.github.io/2019/04/25/recipe/)
 
 **Note 1: Neural net training is a leaky abstraction**
 
@@ -431,9 +431,6 @@ Once you find the best types of architectures and hyper-parameters you can still
 - **leave it training**. I’ve often seen people tempted to stop the model training when the validation loss seems to be leveling off. In my experience networks keep training for unintuitively long time. One time I accidentally left a model training during the winter break and when I got back in January it was SOTA (“state of the art”).
 **Conclusion**
 Once you make it here you’ll have all the ingredients for success: you have a deep understanding of the technology, the dataset and the problem, you’ve set up the entire training/evaluation infrastructure and achieved high confidence in its accuracy, and you’ve explored increasingly more complex models, gaining performance improvements in ways you’ve predicted each step of the way. You’re now ready to read a lot of papers, try a large number of experiments, and get your SOTA results. Good luck!
-
-
-<a name="myfootnote1">*ref*</a>: Source blogpost [*here*](http://karpathy.github.io/2019/04/25/recipe/).
 
 
 
