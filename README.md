@@ -1,8 +1,8 @@
-# NeuralPedia: Information on many subjects in the space of Neural Networks
+# NeuralPedia: 
 
-> Brief interpretations of various subjects in the space of Neural Networks
+> Brief interpretations of many subjects in the space of Neural Networks
 
-## Basics
+## Brief
 
 Below shows various questions I've thought of as I'm trying to formulate my theoretical understanding of the subjects. The order of the various subject is not entirely in order. A lot of the answers are based on the conceptual understanding of the subject (the actual implementation is just a lot of matrix multiplication, amirite?).
 
