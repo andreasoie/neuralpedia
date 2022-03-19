@@ -1,6 +1,6 @@
-# Neural Networks
+# NeuralPedia: Information on many subjects in the space of Neural Networks
 
-Brief interpretations of various subjects in the space of Neural Networks
+> Brief interpretations of various subjects in the space of Neural Networks
 
 ## Basics
 
