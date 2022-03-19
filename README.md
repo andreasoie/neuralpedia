@@ -1,4 +1,4 @@
-# NeuralPedia: 
+# :page_facing_up: NeuralPedia
 
 > Brief interpretations of many subjects in the space of Neural Networks
 
